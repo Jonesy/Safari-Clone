@@ -14,9 +14,9 @@ So there some features of Safari's default state that didn't make the cut, like 
 
 ### Some notes:
 
-* The most surprising part was being able to recreate the Aqua window buttons with multiple CSS gradient backgrounds and not a whole lot of effort. I ended up having to add an extra <span> element so I could get the bevel in cleanly, but I almost could of got away with just one <div>.
-* I chose to go with <input type="search"> over styling a text input with -webkit-border-radius (which looks to jaggedy). Con is that the border colour is slightly off, but pro is it looks nicer and we gain the magnifying glass icon for free (keeping with the no images rules).
-* I chose fonts over <div>'s for the button labels, but with an extra bit of work I could switch them over in order to lose some of the fuzziness that comes with the anti-aliasing.
+* The most surprising part was being able to recreate the Aqua window buttons with multiple CSS gradient backgrounds and not a whole lot of effort. I ended up having to add an extra &lt;span&gt; element so I could get the bevel in cleanly, but I almost could of got away with just one &lt;div&gt;.
+* I chose to go with &lt;input type=&quot;search&quot;&gt; over styling a text input with -webkit-border-radius (which looks to jaggedy). Con is that the border colour is slightly off, but pro is it looks nicer and we gain the magnifying glass icon for free (keeping with the no images rules).
+* I chose fonts over &lt;div&gt;'s for the button labels, but with an extra bit of work I could switch them over in order to lose some of the fuzziness that comes with the anti-aliasing.
 * In the spirit of making the browser with no additional images, I opted to keep the Address Bar globe out, as well as the Refresh button, but with little work these can be slotted in. The source is available on Github, and if anyone wants to take on making the actually browser work, have at it!
 
 Next up: Mobile Safari.
