@@ -1,3 +1,9 @@
+<!--
+	Author: Joshua Jones
+	Company: The General Metrics Web Development Company
+	Date: March 2010
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +16,9 @@
 			background: url(Leopard_Aurora.jpg) no-repeat bottom center;
 			background-attachment: fixed;
 		}
-		
+		/*
+		 * Base Layout
+		 */
 		.chrome div {
 			cursor: default;
 		}
@@ -42,6 +50,17 @@
 			-webkit-user-select: none;
 		}
 		
+		/* Nullify any <a>'s in the chrome */
+		.chrome a {
+			color: rgb(0, 0, 0);
+			text-decoration: none;
+		}
+		
+		.chrome a:hover {
+			color: rgb(255, 255, 255);
+			cursor: default;
+		}
+		
 		.viewport {
 			overflow: auto;
 			padding: 8px;
@@ -51,6 +70,9 @@
 			background-color: rgba(255, 255, 255, 1);
 		}
 		
+		/*
+		 * Window
+		 */
 		.window-title {
 			width: 45%;
 			margin: 0 auto;
@@ -136,6 +158,9 @@
 			line-height: 12px;
 		}
 		
+		/*
+		 * The actual interface area
+		 */
 		.interface {
 			width: 98%;
 			position: absolute;
@@ -143,6 +168,7 @@
 			left: 8px;
 		}
 		
+		/* Bookmark Button */
 		.bookmark {
 			width: 28px;
 			left: 62px;
@@ -187,6 +213,9 @@
 			/*-webkit-appearance: none;*/
 		}
 		
+		/*
+		 * Back/Forward Buttons
+		 */
 		.back-forward {
 			width: 53px;
 			position: absolute;
@@ -263,6 +292,9 @@
 			color: rgba(0, 0, 0, 0.4);
 		}
 		
+		/*
+		 * Bookmarks Bar
+		 */
 		.bookmarks-bar {
 			width: 90%;
 			top: 27px;
@@ -307,16 +339,6 @@
 			-webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
 		}
 		
-		.chrome a {
-			color: rgb(0, 0, 0);
-			text-decoration: none;
-		}
-		
-		.chrome a:hover {
-			color: rgb(255, 255, 255);
-			cursor: default;
-		}
-		
 	</style>
 </head>
 <body>
@@ -353,19 +375,20 @@
 			<h1>A good browser should be able to reproduce itself.</h1>
 			<h3>This is Safari 4 built entirely with HTML and CSS3. No images used.</h3>
 			<small>(Only works in Webkit Mac-based browsers, of course)</small>
-			<p>One thing I've always noticed working as a web developer on a Mac is that Webkit always seemed to have CSS3 features that allows one to recreate Aqua elements quite easily. Inspired by David DeSandro's <a href="http://desandro.com/articles/opera-logo-css/" title="Opera Logo with CSS - David DeSandro">Opera Logo made in CSS</a>, I decided to take on Safari. I approached this with the goal of doing so with:</p>
+			<p>Being a web developer who works on a Mac, I've noticed that Apple's implementation of CSS3 to Webkit and Safari always felt like they were extending OS X GUI elements to the web, even going so far as to make the iTunes store entirely out of Webkit. With that in mind and being inspired by <a href="http://desandro.com/articles/opera-logo-css/" title="Opera Logo with CSS - David DeSandro">David DeSandro's Opera Logo made in CSS</a>, I decided to take on Safari itself. I did so with the following in mind:</p>
 				<ol>
+					<li>Only CSS</li>
 					<li>No images</li>
 					<li>No JavaScript</li>
 					<li>No Canvas</li>
 				</ol>
-				<p>So there some features of Safari's default state that didn't make the cut, like tabs and a some icons and I didn't take any steps to make this experiment work in any other browser (it does work in Chrome for Mac though), I do want to take on FireFox 3.6 to see how far I can reproduce it with Mozilla's CSS3 implementation.</p>
+				<p>With those limits there of course were some features of Safari's default state that didn't make the cut for now — most obviously the tabs and various icons. I also didn't take any steps to make this experiment work in any other browser (it does work in Chrome for Mac however). Eventually I'd like to perform the same experiment with FireFox 3.6, and perhaps others down the road if CSS3 advancements become available.</p>
 			<h3>Some notes:</h3>
 			<ul>
-				<li>The most surprising part was being able to recreate the Aqua window buttons with multiple CSS gradient backgrounds and not a whole lot of effort. I ended up having to add an extra <code>&lt;span&gt;</code> element so I could get the bevel in cleanly, but I almost could of got away with just one <code>&lt;div&gt;</code>.</li>
-				<li>I chose to go with <code>&lt;input type="search"&gt;</code> over styling a text input with <code>-webkit-border-radius</code> (which looks to jaggedy). Con is that the border colour is slightly off, but pro is it looks nicer and we gain the magnifying glass icon for free (keeping with the no images rules).</li>
-				<li>I chose fonts over <code>&lt;div&gt;</code>'s for the button labels, but with an extra bit of work I could switch them over in order to lose some of the fuzziness that comes with the anti-aliasing.</li>
-				<li>In the spirit of making the browser with no additional images, I opted to keep the <strong>Address Bar</strong> globe out, as well as the <strong>Refresh</strong> button, but with little work these can be slotted in. The source is available on <a href="http://example.com/">Github</a>, and if anyone wants to take on making the actually browser work, have at it!</li>
+				<li>The most surprising part was being able to recreate with little effort the Aqua window buttons with multiple CSS gradient backgrounds. I ended up having to add an extra <code>&lt;span&gt;</code> element so I could get the bevel in cleanly, but I almost could of got away with just one <code>&lt;div&gt;</code>.</li>
+				<li>I chose to go with <code>&lt;input type="search"&gt;</code> over styling a text input with <code>-webkit-border-radius</code> over styling a text input with -webkit-border-radius (which looks too jagged). Con is that the border colour is slightly off, but pro is it looks nicer and we gain the magnifying glass icon for free (keeping with the no images rule).</li>
+				<li>I went with fonts over skewed and rotated <code>&lt;div&gt;</code>'s for the button labels, but with an extra bit of work I could switch them over in order to lose some of the fuzziness that comes with Safari's font anti-aliasing.</li>
+				<li>In the spirit of making the browser with no additional images, I opted to keep the Address Bar globe out, as well as the Refresh button, but with little work they can be slotted in. The source is available on <a href="http://example.com/">Github</a>, and if anyone wants to take on making the browser actually work, have at it!</li>
 			</ul>
 			<p>Next up: Mobile Safari.</p>
 		</div>
