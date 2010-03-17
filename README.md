@@ -4,7 +4,7 @@
 
 (Only works in Webkit Mac-based browsers, of course)
 
-Being a web developer who works on a Mac, I've noticed that Apple's implementation of CSS3 to Webkit and Safari always felt like they were extending OS X GUI elements to the web, even going so far as to make the iTunes store entirely out of Webkit. With that in mind and being inspired by David DeSandro's Opera Logo made in CSS, I decided to take on Safari. I approached this with the goal of doing so with:
+Being a web developer who works on a Mac, I've noticed that Apple's implementation of CSS3 to Webkit and Safari always felt like they were extending OS X GUI elements to the web, even going so far as to make the iTunes store mostly out of Webkit. With that in mind and being inspired by David DeSandro's Opera Logo made in CSS, I decided to take on Safari. I approached this with the goal of doing so with:
 
 + Only CSS
 + No images
