@@ -12,7 +12,7 @@
 	<title>Safari</title>
 	<style type="text/css">
 		body {
-			font-family: "Lucida Grande";
+			font-family: "Lucida Grande", "Lucida Sans Unicode", Arial;
 			background: url(Leopard_Aurora.jpg) no-repeat bottom center;
 			background-attachment: fixed;
 		}
@@ -296,6 +296,27 @@
 			color: rgba(0, 0, 0, 0.4);
 		}
 		
+		/* Reload Button */
+		.reload {
+			-webkit-transform: rotate(50deg);
+			position: absolute;
+			z-index: 999;
+			top: 6px;
+			left: 657px;
+			width: 28px;
+			font-family: Menlo, Arial;
+			font-size: 21px;
+			font-weight: 500;
+			line-height:1.05;
+			border:none;
+			background:transparent;
+			color:#555;
+		}
+		
+			.reload:active {
+				color: #444;
+			}
+		
 		/*
 		 * Bookmarks Bar
 		 */
@@ -364,8 +385,9 @@
 					</div>
 				</div>
 				<div class="bookmark button">+</div>
+				 <div class="reload">↻</div>
 				<input type="text" class="url" value="http://localhost/">
-				<input type="search" results="5" placeholder="Google">
+				<input type="search" placeholder="Google">
 				<div class="bookmarks-bar">
 					<ul>
 						<li><a href="http://general-metrics.com/">General Metrics</a></li>
@@ -377,24 +399,10 @@
 		</div>
 		<div class="viewport">
 			<h1>A good browser should be able to reproduce itself.</h1>
-			<h3>This is Safari 4 built entirely with HTML and CSS3. No images used.</h3>
-			<small>(Only works in Webkit Mac-based browsers, of course)</small>
-			<p>Being a web developer who works on a Mac, I've noticed that Apple's implementation of CSS3 to Webkit and Safari always felt like they were extending OS X GUI elements to the web, even going so far as to make the <a href="http://willnorris.com/2009/09/itunes-9-now-with-more-webkit" title="iTunes 9, now with more WebKit - Will Norris">iTunes store mostly out of Webkit</a>. With that in mind and being inspired by <a href="http://desandro.com/articles/opera-logo-css/" title="Opera Logo with CSS - David DeSandro">David DeSandro's Opera Logo made in CSS</a>, I decided to take on Safari itself. I did so with the following in mind:</p>
-				<ol>
-					<li>Only CSS</li>
-					<li>No images</li>
-					<li>No JavaScript</li>
-					<li>No Canvas</li>
-				</ol>
-				<p>With those limits there of course were some features of Safari's default state that didn't make the cut for now — most obviously the tabs and various icons. I also didn't take any steps to make this experiment work in any other browser (it does work in Chrome for Mac however). Eventually I'd like to perform the same experiment with FireFox 3.6, and perhaps others down the road if CSS3 advancements become available.</p>
-			<h3>Some notes:</h3>
-			<ul>
-				<li>The most surprising part was being able to recreate with little effort the Aqua window buttons with multiple CSS gradient backgrounds. I ended up having to add an extra <code>&lt;span&gt;</code> element so I could get the bevel in cleanly, but I almost could of got away with just one <code>&lt;div&gt;</code>.</li>
-				<li>I chose to go with <code>&lt;input type="search"&gt;</code> over styling a text input with <code>-webkit-border-radius</code> over styling a text input with -webkit-border-radius (which looks too jagged). Con is that the border colour is slightly off, but pro is it looks nicer and we gain the magnifying glass icon for free (keeping with the no images rule).</li>
-				<li>I went with fonts over skewed and rotated <code>&lt;div&gt;</code>'s for the button labels, but with an extra bit of work I could switch them over in order to lose some of the fuzziness that comes with Safari's font anti-aliasing.</li>
-				<li>In the spirit of making the browser with no additional images, I opted to keep the Address Bar globe out, as well as the Refresh button, but with little work they can be slotted in. The source is available on <a href="http://github.com/Jonesy/Safari-Clone">Github</a>, and if anyone wants to take on making the browser actually work, have at it!</li>
-			</ul>
-			<p>Next up: Mobile Safari.</p>
+			<h3>Safari 4, built entirely with valid HTML5 and CSS3. Nary an image was used.</h3>
+			<p>Inspired by <a href="http://willnorris.com/2009/09/itunes-9-now-with-more-webkit" title="iTunes 9, now with more WebKit - Will Norris"><em>iTunes 9, now with more WebKit - Will Norris</em></a> and <a href="http://desandro.com/articles/opera-logo-css/" title="Opera Logo with CSS - David DeSandro"><em>Opera Logo with CSS</em></a>.</p>
+			<small>Works on Webkit-based browsers only, best results on a Mac. Mileage in Safari for Windows will vary. Reload button courtesy <a href="http://github.com/henrikh/" title="henrikh's Profile - GitHub">Henrik Hansen</a></small>
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><p>Scrolls too!</p>
 		</div>
 	</div>
 </body>
